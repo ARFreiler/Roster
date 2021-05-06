@@ -107,7 +107,9 @@ function openHTML() {
       <body>
         <header>
           <h1>Team Roster</h1>
-        </header>`;
+        </header>
+        <div class="container">
+      <div class="row" id="top">`;
     fs.writeFile("./src/template.html", htmlHead, function (err) {
         if (err) {
             console.log(err);
