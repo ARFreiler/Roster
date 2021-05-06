@@ -4,7 +4,6 @@ const fs = require('fs')
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 const Manager = require('./lib/manager');
-const { allowedNodeEnvironmentFlags } = require('process');
 
 const employees = [];
 
@@ -66,7 +65,25 @@ function addRole() {
                 name: "moreMembers"
             }
             ])
-
-        })
+                .then(function ({ roleData, moreMembers }) {
+                    let newMember;
+                    if (role === "Engineer") {
+                        newMember = new Engineer(name, id, email, roleData);
+                    } else if (role === "Intern") {
+                        newMember = new Intern(name, id, email, roleData);
+                    } else {
+                        newMember = new Manager(name, id, email, roleData);
+                    }
+                    employees.push(newMember);
+                    addHTML(newMember)
+                        .then(function () {
+                            if (moreMembers === "Yes") {
+                                addRole();
+                            } else {
+                                finishHTML();
+                            }
+                        });
+                });
+        });
 
 }
