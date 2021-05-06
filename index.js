@@ -15,7 +15,7 @@ const employees = [];
 // console.log(Engineer.test);
 
 function buildRoster() {
-    buildHTML();
+    openHTML();
     addRole();
 }
 
@@ -86,4 +86,29 @@ function addRole() {
                 });
         });
 
+}
+
+function openHTML() {
+    const htmlHead = `<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+          src="https://kit.fontawesome.com/42289e799c.js"
+          crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="stylesheet.css" />
+        <title>Roster</title>
+      </head>
+      <body>
+        <header>
+          <h1>Team Roster</h1>
+        </header>`;
+    fs.writeFile("./src/template.html", htmlHead, function (err) {
+        if (err) {
+            console.log(err);
+        }
+    });
+    console.log("start");
 }
