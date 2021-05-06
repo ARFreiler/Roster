@@ -118,7 +118,7 @@ function openHTML() {
     console.log("start");
 }
 
-function fillHTML(member) {
+function addHTML(member) {
     return new Promise(function (resolve, reject) {
         const name = member.getName();
         const role = member.getRole();
@@ -171,5 +171,27 @@ function fillHTML(member) {
             </div>
           </div>`;
         }
-    })
+        console.log("Adding team member");
+        fs.appendFile("./src/template.html", data, function (err) {
+            if (err) {
+                return reject(err);
+            };
+            return resolve();
+        });
+    });
 }
+
+function finishHTML() {
+    const html = ` </div>
+    </body>
+  </html>`;
+
+    fs.appendFile("./src/template.html", html, function (err) {
+        if (err) {
+            console.log(err);
+        };
+    });
+    console.log("end");
+}
+
+buildRoster();
