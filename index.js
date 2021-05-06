@@ -4,6 +4,7 @@ const fs = require('fs')
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 const Manager = require('./lib/manager');
+const Employee = require('./lib/employee');
 
 const employees = [];
 
@@ -18,6 +19,8 @@ function buildRoster() {
     openHTML();
     addRole();
 }
+
+// console.log(buildRoster());
 
 function addRole() {
     inquirer.prompt([{
@@ -45,11 +48,11 @@ function addRole() {
         .then(function ({ name, role, id, email }) {
             let roleData = "";
             if (role === "Engineer") {
-                roleData = "GitHub username";
+                roleData = "GitHub username.";
             } else if (role === "Intern") {
-                roleData = "School name";
+                roleData = "School name.";
             } else {
-                roleData = "Office number";
+                roleData = "Office number.";
             }
             inquirer.prompt([{
                 message: `Enter team member's ${roleData}`,
@@ -111,4 +114,60 @@ function openHTML() {
         }
     });
     console.log("start");
+}
+
+function fillHTML(member) {
+    return new Promise(function (resolve, reject) {
+        const name = member.getName();
+        const role = member.getRole();
+        const id = member.getId();
+        const email = member.getEmail();
+        let data = "";
+        if (role === "Engineer") {
+            const gitHub = member.getGitHub();
+            data = `<div class="member">
+            <div class="member-head">
+              <h2>${name}</h2>
+              <h3><i class="fas fa-hard-hat"></i> Engineer</h3>
+            </div>
+            <div class="member-body">
+              <ul>
+                <li>${id}</li>
+                <li>${email}</li>
+                <li>${gitHub}</li>
+              </ul>
+            </div>
+          </div>`;
+        } else if (role === "Intern") {
+            const school = member.getSchool();
+            data = `<div class="member">
+            <div class="member-head">
+              <h2>${name}</h2>
+              <h3><i class="fas fa-user-graduate"></i> Intern</h3>
+            </div>
+            <div class="member-body">
+              <ul>
+                <li>${id}</li>
+                <li>${email}</li>
+                <li>${school}</li>
+              </ul>
+            </div>
+          </div>`;
+        } else {
+            const officeNumber = member.getOfficeNumber();
+            data = `<div class="member">
+            <div class="member-head">
+              <h2>${name}</h2>
+              <h3><i class="fas fa-mug-hot"></i> Manager</h3>
+            </div>
+            <div class="member-body">
+              <ul>
+                <li>${id}</li>
+                <li>${email}</li>
+                <li>${officeNumber}</li>
+              </ul>
+            </div>
+          </div>`;
+        }
+    })
 }
