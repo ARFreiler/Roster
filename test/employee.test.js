@@ -1,4 +1,4 @@
-const Employee = require("./lib/employee");
+const Employee = require("../lib/employee");
 
 describe("Employee", () => {
     it("Should initiate the employee section", () => {
