@@ -15,7 +15,7 @@ describe("Employee", () => {
     it("Can set an ID with constructor function arguements", () => {
         const testValue = 360;
         const emp = new Employee("Audrey", testValue);
-        expect(emp.ID).toBe(testValue)
+        expect(emp.id).toBe(testValue)
     });
 
     it("Can set an email with constructor function arguements", () => {
@@ -37,7 +37,7 @@ describe("getID", () => {
     it("Can get a ID via getID()", () => {
         const testValue = 90;
         const emp = new Employee("Allegra", testValue);
-        expect(emp.getID()).toBe(testValue);
+        expect(emp.getId()).toBe(testValue);
     });
 });
 
