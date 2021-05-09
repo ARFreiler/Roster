@@ -34,6 +34,8 @@ Run _node index.js_ from the command line.
 
 [Repository]()
 
+![](https://user-images.githubusercontent.com/75546695/117588824-02c66f80-b0f4-11eb-9c2d-3397595fa86e.png)
+
 ## License
 
 The MIT License (MIT) Copyright © 2021 Ashleigh Freiler
