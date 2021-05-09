@@ -8,19 +8,13 @@ const Employee = require('./lib/employee');
 
 const employees = [];
 
-// console.log(fs);
-// console.log(inquirer);
 
-// console.log(Manager.test);
-// console.log(Intern.test);
-// console.log(Engineer.test);
 
 function buildRoster() {
   openHTML();
   addRole();
 }
 
-// console.log(buildRoster());
 
 function addRole() {
   inquirer.prompt([{
@@ -88,8 +82,8 @@ function addRole() {
             });
         });
     });
-
 }
+
 
 function openHTML() {
   const htmlHead = `<!DOCTYPE html>
@@ -117,6 +111,7 @@ function openHTML() {
   });
   console.log("start");
 }
+
 
 function addHTML(member) {
   return new Promise(function (resolve, reject) {
@@ -181,6 +176,7 @@ function addHTML(member) {
   });
 }
 
+
 function finishHTML() {
   const html = ` </div>
     </body>
@@ -193,5 +189,6 @@ function finishHTML() {
   });
   console.log("end");
 }
+
 
 buildRoster();

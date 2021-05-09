@@ -20,9 +20,19 @@ A command-line application that allows a supervisor to input and maintain their 
 
 ## Installation
 
+Run _node index.js_ from the command line.
+
 ## Credits
 
+[MDN Documents](https://developer.mozilla.org/en-US/docs/Learn)
+
+[FontAwesome](https://fontawesome.com/)
+
+[W3Schools](https://www.w3schools.com)
+
 ## Links
+
+[Repository]()
 
 ## License
 
