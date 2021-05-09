@@ -136,7 +136,7 @@ function addHTML(member) {
               <ul>
                 <li>ID: ${id}</li>
                 <li>Email: <br><a href="mailto:${email}">${email}</a></li>
-                <li>GitHub: ${gitHub}</li>
+                <li>GitHub:<a href="https://github.com/${gitHub}">${gitHub}</a></li>
               </ul>
             </div>
           </div>`;
