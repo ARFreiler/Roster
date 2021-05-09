@@ -32,7 +32,7 @@ body {
 .member {
     display: flex;
     flex-direction: column;
-    width: 30vh;
+    width: 35vh;
     margin: 10px;
     margin-right: 10px;
     padding: 10px;

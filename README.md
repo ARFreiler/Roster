@@ -16,6 +16,8 @@
 
 ## Description
 
+A command-line application that allows a supervisor to input and maintain their teams email addresses and GitHub profiles.
+
 ## Installation
 
 ## Credits
