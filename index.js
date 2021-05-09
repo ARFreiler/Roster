@@ -135,7 +135,7 @@ function addHTML(member) {
             <div class="member-body">
               <ul>
                 <li>ID: ${id}</li>
-                <li>Email: ${email}</li>
+                <li>Email: <br><a href="mailto:${email}">${email}</a></li>
                 <li>GitHub: ${gitHub}</li>
               </ul>
             </div>
@@ -150,7 +150,7 @@ function addHTML(member) {
             <div class="member-body">
               <ul>
                 <li>ID: ${id}</li>
-                <li>Email: ${email}</li>
+                <li>Email: <br><a href="mailto:${email}">${email}</a></li>
                 <li>School: ${school}</li>
               </ul>
             </div>
