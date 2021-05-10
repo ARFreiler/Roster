@@ -32,7 +32,9 @@ Run _node index.js_ from the command line.
 
 ## Links
 
-[Repository]()
+[Screencastify](https://drive.google.com/file/d/13-j5tuQoER-FSupJH8Yk5Z53q4jQ0oH9/view)
+
+[Repository](https://github.com/ARFreiler/Roster)
 
 ![](https://user-images.githubusercontent.com/75546695/117588824-02c66f80-b0f4-11eb-9c2d-3397595fa86e.png)
 
