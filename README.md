@@ -36,7 +36,9 @@ Run _node index.js_ from the command line.
 
 [Repository](https://github.com/ARFreiler/Roster)
 
-![](https://user-images.githubusercontent.com/75546695/117588824-02c66f80-b0f4-11eb-9c2d-3397595fa86e.png)
+![](https://user-images.githubusercontent.com/75546695/117592328-2692b100-b106-11eb-98cd-982f92178e1d.png)
+
+![](https://user-images.githubusercontent.com/75546695/117592266-ed5a4100-b105-11eb-96f1-2902d5eb77b7.png)
 
 ## License
 
